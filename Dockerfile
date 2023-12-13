@@ -1,4 +1,3 @@
 FROM tomcat:latest
-RUN cp -R  /usr/local/tomcat/webapps.dist/*  /usr/local/tomcat/webapps
-COPY /webapp/target/*.war /usr/local/tomcat/webapps
-
+COPY /server/target/server.jar /usr/local/tomcat/webapps
+CMD ['sh', '/usr/local/tomcat/bin/startup.sh', 'run']
