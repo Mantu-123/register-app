@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: c1
-          image: mantu910/example:latest
+          image: mantu910/example
           ports:
            - containerPort: 80
   
