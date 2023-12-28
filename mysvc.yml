@@ -9,4 +9,4 @@ spec:
       targetPort: 80
       nodePort: 30030
   selector:
-    abc: example
+    name: register-app
