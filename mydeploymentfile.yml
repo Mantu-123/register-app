@@ -1,20 +1,14 @@
-apiVersion: apps/v1
-kind: Deployment
+apiVersion: v1
+kind: Pod
 metadata:
-  name: mydep
+  name: register-app
+  labels:
+    name: register-app
+    app: voting-app
 spec:
-  replicas: 2
-  selector:
-    matchLabels:
-      abc: example
-  template:
-    metadata:
-      labels:
-        abc: example
-    spec:
-      containers:
-        - name: c1
-          image: mantu910/example
-          ports:
-           - containerPort: 80
-  
+  containers:
+    - name: register-app
+      image: mantu910/example
+      imagePullPolicy: IfNotPresent
+      ports:
+        - containerPort: 80
